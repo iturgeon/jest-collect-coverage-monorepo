@@ -1,0 +1,21 @@
+{
+	"private": true,
+	"name": "jest-collect-coverage-monorepo",
+	"scripts": {
+		"test": "jest --verbose"
+	},
+	"jest": {
+		"projects": ["<rootDir>/packages/*"],
+		"coverageThreshold": {
+			"global": {
+				"branches": 100,
+				"functions": 100,
+				"lines": 100,
+				"statements": 100
+			}
+		}
+	},
+	"workspaces": [
+		"packages/a"
+	]
+}
